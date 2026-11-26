@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es" data-preview="false">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#090909">
+<title>Luna — IV / VI</title>
+<style>
+:root{color-scheme:dark;--bg:#090909;--ink:#f3e8d8;--muted:#a99e93;--gold:#f4c56b;--red:#d76b63;--orange:#e9935b;--line:#514034;--warm:.12;--progress:0%;--mono:'SFMono-Regular',Consolas,'Liberation Mono',monospace;--serif:Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-color:#765340 #090909}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 50% 28%,rgba(138,70,32,calc(var(--warm)*.18)),transparent 64%)}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}.skip{position:absolute;left:-10000px}.skip:focus{left:12px;top:12px;padding:12px;color:var(--ink);background:#222;z-index:5}.read-progress{position:fixed;inset:0 0 auto;height:2px;z-index:10;background:#171310}.read-progress:after{content:"";display:block;width:var(--progress);height:100%;background:linear-gradient(90deg,var(--gold),var(--red),var(--orange));transition:width .12s linear}
+.world{max-width:1540px;min-height:100svh;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,630px) minmax(0,1fr);gap:clamp(8px,2vw,44px);padding:0 clamp(12px,2.8vw,48px);align-items:start}.wing{position:sticky;top:0;height:100svh;min-width:0;display:flex;align-items:center;justify-content:center;pointer-events:none;overflow:hidden}.art{width:100%;max-width:440px;aspect-ratio:39/65;display:block;opacity:.95}.left{justify-self:stretch}.right{justify-self:stretch}.center{min-width:0;padding:0 clamp(0px,1.5vw,14px)}.cover{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:54px 0 80px}.folio{font:11px var(--mono);letter-spacing:.33em;color:#a29181;display:flex;align-items:center;gap:15px}.folio:before,.folio:after{content:"";display:block;width:42px;height:1px;background:linear-gradient(90deg,transparent,#775940)}.folio:after{transform:rotate(180deg)}.eclipse{width:132px;height:132px;margin:36px auto;position:relative;display:grid;place-items:center;isolation:isolate}.eclipse .solar{width:94px;height:94px;border:1px solid #e8b273;border-radius:50%;position:absolute;box-shadow:0 0 20px #e89b4933,0 0 56px #a857251c;animation:breathe 7s ease-in-out infinite}.eclipse .lunar{width:91px;height:91px;background:#090909;border:1px solid #493832;border-radius:50%;position:absolute;transform:translate(12px,-4px);box-shadow:inset 0 0 16px #281a15;transition:transform 1.6s ease}.opened .eclipse .lunar{transform:translate(4px,0)}.eclipse .glint{position:absolute;color:#ffd09a;right:13px;bottom:26px;font-size:14px;animation:twinkle 5s ease-in-out infinite}.orbit{position:absolute;inset:4px;border:1px dashed #382d23;border-radius:50%;transform:rotate(-20deg) scaleY(.46);z-index:-1}@keyframes breathe{50%{box-shadow:0 0 32px #e89b4955,0 0 82px #a8572533}}@keyframes twinkle{50%{opacity:.35}}
+h1{margin:0;font-size:clamp(39px,6vw,66px);font-weight:400;line-height:1.12;letter-spacing:-.045em;text-wrap:balance}.subtitle{font:12px/1.8 var(--mono);letter-spacing:.12em;margin:20px 0 0;color:#aa9988}.open{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:52px;margin-top:44px;padding:15px 24px;border:1px solid #8c6544;border-radius:2px;background:#15100d;color:#f1d6b9;font:12px var(--mono);letter-spacing:.12em;transition:background .35s,border-color .35s,transform .35s}.open:hover{background:#2b1b13;border-color:#d7a776;transform:translateY(-2px)}.open .arrow{color:var(--orange);font-size:17px}.open:disabled{opacity:.6}.date{font:10px var(--mono);color:#776e65;letter-spacing:.2em;margin-top:36px}.mobile-scene{display:none}.letter{max-width:630px;margin:0 auto;padding:48px 0 0;scroll-margin-top:26px;position:relative}.letter[hidden]{display:none}.letter-head{border-top:1px solid #554033;padding:32px 0 26px;display:flex;justify-content:space-between;align-items:center;color:#bb9d82;font:10px var(--mono);letter-spacing:.22em}.letter-head .heart{color:var(--orange);font:18px var(--serif)}.letter h2{font-size:clamp(31px,4.2vw,46px);font-weight:400;line-height:1.25;letter-spacing:-.025em;margin:0 0 38px;color:#f4e7d5;text-wrap:balance}.letter-body{font-size:clamp(17px,1.8vw,20px);line-height:1.92;overflow-wrap:anywhere}.letter-body p{margin:0 0 1.65em;white-space:pre-wrap}.letter-body p:first-child:first-letter{font-size:1.25em;color:#f0b373}.letter-body strong{font-weight:700}.letter-body em{font-style:italic}.letter-body .placeholder{font-style:italic;color:#a29b91}.letter-body .placeholder:first-child:first-letter{font-size:inherit;color:inherit}.end{padding:70px 0 75px;text-align:center;border-top:1px solid #443328;margin-top:52px}.window{margin:auto;display:block;width:168px;height:170px;overflow:visible}.window .lit{fill:#f1ab65;opacity:.08;transition:opacity 2s}.window .glow{opacity:0;transition:opacity 2s}.end.reached .lit{opacity:.66}.end.reached .glow{opacity:.7}.end .end-heart{font-size:24px;color:var(--orange);margin:26px 0 10px}.end .folio{justify-content:center}.end .small{font:10px var(--mono);letter-spacing:.15em;color:#776e65;margin:18px 0 0}.replay{background:none;border:0;color:#b8a48e;font:11px var(--mono);padding:14px;min-height:44px;margin-top:18px}.replay:hover{color:var(--gold)}.open:focus-visible,.replay:focus-visible{outline:2px solid #e3a46b;outline-offset:4px}.letter.enter{animation:open-letter 1.3s ease both}@keyframes open-letter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:980px){.world{grid-template-columns:minmax(0,1fr) minmax(0,580px) minmax(0,1fr);gap:10px;padding:0 12px}.wing{opacity:.82}.center{padding:0 8px}}@media(max-width:760px){.world{display:block;padding:0 22px;max-width:630px}.wing{display:none}.center{padding:0}.cover{min-height:auto;padding:56px 0 66px}.mobile-scene{display:block;width:100%;max-width:400px;margin:0 auto 24px;aspect-ratio:2.8/1;overflow:hidden;position:relative}.mobile-scene canvas{width:100%;height:100%;display:block}.eclipse{width:106px;height:106px;margin:22px auto}.eclipse .solar{width:79px;height:79px}.eclipse .lunar{width:76px;height:76px}.eclipse .glint{bottom:18px;right:7px}.cover .folio{font-size:10px}.subtitle{font-size:11px}.open{margin-top:32px}.date{margin-top:26px}.letter{padding:24px 0 0;scroll-margin-top:15px}.letter h2{margin-bottom:28px}.letter-body{font-size:18px;line-height:1.85}.end{padding:52px 0 42px}.end .window{width:145px;height:147px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}@media print{body{color:#151515;background:white}body:before,.wing,.cover,.read-progress,.end,.skip{display:none!important}.world{display:block;padding:0;max-width:none}.letter,.letter[hidden]{display:block!important;padding:0}.letter h2,.letter-body,.letter-head{color:#151515}.letter-head{border-color:#aaa}}
+
+/* V3 — the landscape is a continuous, illuminated textual engraving. */
+:root{--bg:#08090b;--ink:#f5eadb;--muted:#b7a99b}
+body{background:#08090b}body:before{background:radial-gradient(ellipse at 50% 30%,#171117 0%,transparent 57%)}
+.world{max-width:1800px;grid-template-columns:minmax(0,1fr) minmax(0,590px) minmax(0,1fr);gap:clamp(10px,1.4vw,24px);padding:0 clamp(12px,2vw,32px)}
+.wing{height:100svh;align-items:center;overflow:hidden}.art{width:100%;height:min(94svh,920px);max-width:560px;aspect-ratio:auto;opacity:1;mask-image:linear-gradient(to bottom,transparent,#000 3%,#000 96%,transparent)}
+.center{padding:0 10px;position:relative}.cover{position:relative;isolation:isolate;min-height:100svh;padding:58px 24px 64px}.cover:before{content:'';position:absolute;inset:8.5% 0;z-index:-1;border:1px solid #644a353b;background:radial-gradient(ellipse at 50% 40%,#1a13121c,transparent 75%);mask-image:linear-gradient(0deg,transparent,#000 12%,#000 88%,transparent)}
+.cover:after{content:'✧';position:absolute;top:9%;color:#c69b6e;font-size:13px;line-height:1;background:#08090b;padding:0 10px;z-index:0}
+.folio{color:#d3b18e;letter-spacing:.42em}.folio:before,.folio:after{width:48px;background:linear-gradient(90deg,transparent,#ae8257)}
+.eclipse{width:180px;height:180px;margin:34px auto 28px}.eclipse .solar{width:112px;height:112px;border:1.5px solid #ffd39a;box-shadow:0 0 10px #ffc26c66,0 0 42px #f2914355,0 0 100px #a63e1e25}.eclipse .lunar{width:109px;height:109px;background:#08090b;transform:translate(10px,-3px);border-color:#8b5840;box-shadow:inset 0 0 20px #241a1a}.eclipse .orbit{inset:7px;border-color:#74553d;transform:rotate(-27deg) scaleY(.53)}.eclipse .glint{right:26px;bottom:36px;color:#ffe4b1}
+.cover h1{font-size:clamp(44px,6.5vw,82px);letter-spacing:-.055em;text-shadow:0 0 36px #f6bc7229}.subtitle{color:#c1a78f;font-size:12px;letter-spacing:.09em}.open{background:linear-gradient(120deg,#211713,#151016);border:1px solid #bc8556;color:#ffe3c4;padding:16px 30px;box-shadow:0 0 28px #cd79221a;min-height:56px}.open:hover{box-shadow:0 0 32px #cd79223a}.date{color:#ab9381}
+.letter{max-width:570px;padding:28px 30px 0;background:linear-gradient(90deg,#110e10aa,#12101388,#110e10aa);border-left:1px solid #a17a4b29;border-right:1px solid #a17a4b29}.letter-head{border-top:1px solid #89644777;color:#e1b184;padding-top:24px}.letter-body{font-size:clamp(18px,1.6vw,20px);line-height:1.86;color:#f0e3d5}.letter-body p:first-child:first-letter{color:#ffba7b}.letter-body p{margin-bottom:1.5em}.end{border-color:#966b4655}.end-heart{filter:drop-shadow(0 0 10px #ff8f48)}.window{width:220px;height:224px}
+@media(max-width:1100px) and (min-width:761px){.world{grid-template-columns:minmax(0,1fr) minmax(0,52vw) minmax(0,1fr);gap:5px;padding:0 9px}.art{height:min(86svh,850px)}.letter{padding:28px 18px 0}.center{padding:0 2px}}
+@media(max-width:760px){.world{padding:0 18px;max-width:630px}.cover{min-height:100svh;padding:24px 12px 55px}.cover:before{inset:3% 0 5%}.cover:after{display:none}.mobile-scene{width:100%;max-width:470px;aspect-ratio:1.68; margin:0 auto 22px;mask-image:linear-gradient(#000 88%,transparent)}.eclipse{width:124px;height:124px;margin:16px auto 20px}.eclipse .solar{width:84px;height:84px}.eclipse .lunar{width:82px;height:82px}.eclipse .glint{right:13px;bottom:20px}.cover h1{font-size:53px}.subtitle{font-size:10px}.open{margin-top:28px}.date{margin-top:24px}.letter{padding:22px 14px 0}.letter-body{font-size:18px;line-height:1.85}.window{width:170px;height:172px}}
+@media print{.letter{background:white;border:0;padding:0}.letter-body{color:#151515}}
+
+/* A compact, independently composed panorama for phone-sized screens. */
+.mobile-reading-scene{display:none}.cover .open{position:relative;overflow:hidden}.cover .open:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 25%,#ffd2a018 50%,transparent 75%);transform:translateX(-110%);animation:invitation 8s ease-in-out infinite}@keyframes invitation{0%,65%{transform:translateX(-110%)}85%,100%{transform:translateX(110%)}}
+@media(max-width:760px){.mobile-scene{aspect-ratio:1.7;max-width:470px;margin-bottom:24px;mask-image:linear-gradient(#000 94%,transparent)}.mobile-reading-scene{display:block;aspect-ratio:2.05;width:100%;margin:5px 0 24px;mask-image:linear-gradient(#000 92%,transparent)}.mobile-reading-scene canvas{display:block;width:100%;height:100%}.letter{padding-left:12px;padding-right:12px}.letter h2{margin-bottom:24px}.letter-body{font-size:18px;line-height:1.83}.cover{padding-top:20px;padding-bottom:42px}.eclipse{margin-top:14px;margin-bottom:16px}}
+
+/* IV / VI — a quiet reference to leaded church glass. */
+:root{--glass-rail:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%22112%22%20viewBox%3D%220%200%2016%20112%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%2216%22%20height%3D%22112%22%20fill%3D%22%2315131b%22%2F%3E%3Cg%20stroke%3D%22%23141116%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%200H15L8%2020Z%22%20fill%3D%22%23685136%22%2F%3E%3Cpath%20d%3D%22M1%200L8%2020%201%2040Z%22%20fill%3D%22%23334766%22%2F%3E%3Cpath%20d%3D%22M15%200L8%2020%2015%2040Z%22%20fill%3D%22%23592c43%22%2F%3E%3Cpath%20d%3D%22M8%2020L15%2040%208%2056%201%2040Z%22%20fill%3D%22%23976541%22%2F%3E%3Cpath%20d%3D%22M1%2040L8%2056%201%2072Z%22%20fill%3D%22%234b555a%22%2F%3E%3Cpath%20d%3D%22M15%2040L8%2056%2015%2072Z%22%20fill%3D%22%236e3c39%22%2F%3E%3Cpath%20d%3D%22M8%2056L15%2072%208%2092%201%2072Z%22%20fill%3D%22%233a5262%22%2F%3E%3Cpath%20d%3D%22M1%2072L8%2092%201%20112Z%22%20fill%3D%22%23603645%22%2F%3E%3Cpath%20d%3D%22M15%2072L8%2092%2015%20112Z%22%20fill%3D%22%233f555c%22%2F%3E%3Cpath%20d%3D%22M1%20112L8%2092%2015%20112Z%22%20fill%3D%22%23685136%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M.6%200V112M15.4%200V112%22%20stroke%3D%22%238d7156%22%20stroke-opacity%3D%22.65%22%20stroke-width%3D%22.7%22%2F%3E%3Cpath%20d%3D%22M8%2033L11%2040%208%2047%205%2040Z%22%20fill%3D%22%23cb9a60%22%20fill-opacity%3D%22.55%22%2F%3E%3Cpath%20d%3D%22M8%2065L11%2072%208%2079%205%2072Z%22%20fill%3D%22%239eabb3%22%20fill-opacity%3D%22.35%22%2F%3E%3C%2Fsvg%3E")}
+.glass-frame{position:absolute;inset:8.5% 0;pointer-events:none;z-index:0;opacity:.78;}
+.glass-frame:before,.glass-frame:after,.letter:before,.letter:after{content:"";position:absolute;top:0;bottom:0;width:14px;background-image:var(--glass-rail);background-size:14px 98px;background-repeat:repeat-y;pointer-events:none;box-shadow:0 0 10px #94654513;}
+.glass-frame:before,.letter:before{left:0}.glass-frame:after,.letter:after{right:0;transform:scaleX(-1)}
+.glass-frame:before,.glass-frame:after{mask-image:linear-gradient(transparent,#000 5%,#000 95%,transparent)}
+.glass-crest{position:absolute;left:50%;top:-23px;width:182px;height:46px;transform:translateX(-50%);overflow:visible;filter:drop-shadow(0 0 6px #b6854825)}
+.cover:after{display:none}.cover:before{border-color:#77604b46}
+.letter:before,.letter:after{width:10px;background-size:10px 70px;opacity:.52;mask-image:linear-gradient(transparent,#000 30px,#000 calc(100% - 40px),transparent)}
+.letter{border-left:0;border-right:0}.letter-head{border-top-color:#9c79584d}
+.window .pane{opacity:.42;transition:opacity 2s}.end.reached .window .pane{opacity:.89}.window .mullion{stroke:#171018;stroke-width:1.6;stroke-linejoin:round;fill:none}.window .lead-outline{stroke:#c29b76;stroke-width:1.15;fill:none}
+@media(max-width:760px){.glass-frame{inset:3% 0 5%;opacity:.72}.glass-frame:before,.glass-frame:after{width:7px;background-size:7px 64px}.glass-crest{width:128px;height:33px;top:-16px}.letter:before,.letter:after{width:5px;background-size:5px 49px;opacity:.5}.letter{padding-left:15px;padding-right:15px}.cover{padding-left:15px;padding-right:15px}}
+@media print{.glass-frame,.letter:before,.letter:after{display:none!important}}
+
+/* V0.6: motion and light, without changing the V0.4 geometry. */
+:root{--light-level:0}
+.cover h1,.cover .subtitle,.cover .folio,.cover .date,.cover .open{animation:arrive 1s ease-out both}
+.cover .folio{animation-delay:.12s}.cover h1{animation-delay:.25s}.cover .subtitle{animation-delay:.38s}.cover .open{animation-delay:.48s}.cover .date{animation-delay:.55s}
+@keyframes arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.glass-frame:before,.glass-frame:after,.letter:before,.letter:after{filter:brightness(calc(1 + var(--light-level)*.35));transition:filter .6s ease}
+.glass-crest{filter:drop-shadow(0 0 7px #b6854835);transition:filter 1.8s ease}.opened .glass-crest{filter:drop-shadow(0 0 12px #e6b36c55)}
+.letter.enter{animation:open-letter 1.15s cubic-bezier(.22,.61,.36,1) both}
+.letter h2{position:relative}.letter h2:after{content:'';display:block;margin-top:20px;width:38px;height:1px;background:linear-gradient(90deg,#e8a66a,transparent);opacity:.75}
+.end.reached .window .pane path{animation:glass-light 2s ease-out both;animation-delay:calc(var(--pane-i,0)*90ms)}
+@keyframes glass-light{0%{filter:brightness(.6)}65%{filter:brightness(1.3)}100%{filter:brightness(1)}}
+.end.reached .end-heart{animation:heart-glow 4.8s ease-in-out infinite}@keyframes heart-glow{0%,100%{filter:drop-shadow(0 0 5px #ff8f4840)}50%{filter:drop-shadow(0 0 15px #ff8f4870)}}
+@media(prefers-reduced-motion:reduce){.cover h1,.cover .subtitle,.cover .folio,.cover .date,.cover .open,.end.reached .window .pane path,.end.reached .end-heart{animation:none!important}.glass-crest{transition:none}}
+@media print{.letter h2:after{display:none}}
+
+/* Final letter: illuminate the established landscape, never distort its proportions. */
+:root{--dawn:0;--affection:0;--faith:0}
+.letter-body p{position:relative;hyphens:none;overflow-wrap:break-word}
+.letter-body p em{color:#ffce9d;font-style:italic;text-decoration:none}
+.letter-body p[data-scene="risk"],.letter-body p[data-scene="affection"]:nth-child(6),.letter-body p[data-scene="faith"]:nth-child(9){padding-top:30px;margin-top:12px}
+.letter-body p[data-scene="risk"]:before,.letter-body p[data-scene="affection"]:nth-child(6):before,.letter-body p[data-scene="faith"]:nth-child(9):before{content:"";position:absolute;top:5px;left:50%;width:8px;height:8px;transform:translateX(-50%) rotate(45deg);border:1px solid #b78b62;background:#33221e;box-shadow:0 0 14px #d9914b28}
+.letter-body p[data-scene="faith"]:nth-child(9):before{background:#705849;border-color:#c6a37c;box-shadow:-6px 6px 0 -2px #43576c,6px -6px 0 -2px #864e59,0 0 15px #e6b87b55}
+.letter:before,.letter:after{filter:brightness(calc(1 + var(--light-level)*.35 + var(--faith)*.4));transition:filter .8s ease}
+.letter{background:radial-gradient(ellipse at 50% 77%,rgba(109,66,45,calc(var(--faith)*.065)),transparent 56%),linear-gradient(90deg,#110e10aa,#12101388,#110e10aa)}
+.end.reached .window{filter:drop-shadow(0 0 15px #c9935722);transition:filter 2s}
+@media(max-width:760px){.letter-body p[data-scene="risk"],.letter-body p[data-scene="affection"]:nth-child(6),.letter-body p[data-scene="faith"]:nth-child(9){padding-top:26px}}
+@media print{.letter-body p em{color:inherit}.letter{background:white}.letter-body p:before{display:none!important}}
+</style>
+</head>
+<body><a class="skip" href="#carta">Ir a la carta</a><div class="read-progress" aria-hidden="true"></div>
+<main class="world">
+<aside class="wing left" aria-hidden="true"><canvas class="art" id="left"></canvas></aside>
+<section class="center">
+<header class="cover" id="inicio">
+  <div class="glass-frame" aria-hidden="true"><svg class="glass-crest" viewBox="0 0 182 46"><g stroke="#19141b" stroke-width="1.15" stroke-linejoin="round"><path d="M2 23H66L72 14 72 32 66 23Z" fill="#685036"/><path d="M180 23H116L110 14 110 32 116 23Z" fill="#685036"/><circle cx="91" cy="23" r="19.5" fill="#17141b" stroke="#987854"/><g><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#976541" transform="rotate(0 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#4d6576" transform="rotate(45 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#713d4a" transform="rotate(90 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#72604b" transform="rotate(135 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#a16a46" transform="rotate(180 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#485d6e" transform="rotate(225 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#75464a" transform="rotate(270 91 23)"/><path d="M91 18Q79 8 91 4Q103 8 91 18Z" fill="#68604a" transform="rotate(315 91 23)"/><circle cx="91" cy="23" r="5" fill="#c79b67" stroke="#2a1d1b"/></g></g><path d="M3 23H69M113 23H179" stroke="#9f7952" stroke-width=".65" opacity=".75"/></svg></div>
+  <div class="mobile-scene" aria-hidden="true"><canvas id="mobile"></canvas></div>
+  <div class="folio">IV / VI</div>
+  <div class="eclipse" aria-hidden="true"><div class="orbit"></div><div class="solar"></div><div class="lunar"></div><span class="glint">✧</span></div>
+  <h1 id="cover-title">Luna</h1>
+  <p class="subtitle">Como tú me has cambiado a mí</p>
+  <button class="open" id="open" aria-controls="carta" aria-expanded="false">Abrir carta <span class="arrow" aria-hidden="true">↘</span></button>
+  <div class="date">27 · 05 · 2026</div>
+</header>
+<article id="carta" class="letter" tabindex="-1" hidden aria-labelledby="letter-title">
+  <div class="letter-head"><span>IV / VI</span><span class="heart" aria-hidden="true">♥</span></div>
+  <div class="mobile-reading-scene" aria-hidden="true"><canvas id="mobileRead"></canvas></div>
+  <h2 id="letter-title">Luna</h2>
+  <div class="letter-body" id="letter-body">
+    <p data-scene="intro">Desde el día que te conocí como la persona con quien soñaba estar, han cambiado muchas cosas dentro de mí. Me he dado cuenta de cosas que de cualquier otra forma nunca habría notado, por miedo, por vergüenza, por ignorancia y por no conocer lo que sería posible, y así como yo he intentado ayudarte para que te vuelvas la mejor versión de ti misma, alguien de quien estés orgullosa de ser, también me has ayudado de formas que nunca pensé que pasarían, me has cambiado como persona para mejor, y me has ayudado a crecer y a sanar en muchas cosas. Me has ayudado a volverme la mejor versión de mí mismo, y mereces saber cuánto me has ayudado en mi vida</p>
+    <p data-scene="intro">En nuestros primeros días juntos, yo estaba más tenso que los cables de un puente, no me acuerdo un momento en mi vida que me haya sentido tan congelado frente a lo que me estaba sucediendo, yo solo estaba ahí aterrorizado por cuál era el siguiente cosa que me ibas a hacer. Pero en esos días, me permití que me enseñaras qué era tu amor tal y como querías dármelo, cómo era realmente que te amaran sin filtros y por primera vez en mucho tiempo rendí mi control de la situación a ti, a que la vida me dejara llevar, y definitivamente me llevó muuuuyy lejos </p>
+    <p data-scene="risk">Lo primero que aprendí contigo cielo, es que no siempre sabré cómo terminaran las cosas: Cuando empezamos, tenía mucho miedo de qué podría pasar, cómo, cuándo, y obvio, el perder tu amistad 🥺, pero es una decisión de la que no me arrepiento, y de la que no puedo imaginarme de otra forma, no sé qué hubiera sido de mi vida si no te hubiera llamado o si te hubiera dicho que no el lunes siguiente, que hubiera sido no vivir los seis meses más bonitos de mi vida, y ahora sé que muchos más momentos así me esperan, y te agradezco que me hayas mostrado <em>lo que es tomar un riesgo</em>.</p>
+    <p data-scene="dawn">Algo de lo que me di cuenta contigo, cielo, es que siendo completamente honestos, no confiaba en mí. Noté que casi sólo hacía las cosas cuando esperaba que me iba a ir bien — que cuando ganara no lograba nada y me sentía vacío, y que cuando perdía me enojaba conmigo mismo por torpe — pero descubrí que las cosas se hacen creyendo en sí mismo, que está bien aventarte a tu primera cita, con un regalo que no sabes si le gustará, con una canción de la que no sabes qué opinará, que estarás solo en un café con ella sin saber que hacer, o como tomar ese primer beso y dar así un amanecer. Hice todo eso sin saber si iba a ir bien. Si hubiera fallado, estaría bien, hubiera aprendido mi lección, pero hacer de ese día tan nuestro y feliz, eso amor, es lo que ahora aprendí a llamar triunfar de verdad.</p>
+    <p data-scene="dawn">Y así como yo te he empujado a creer en ti, a decirte que puedes lograr tus sueños y tus metas, todo este tiempo a propósito o no me has ayudado a hacer lo mismo 💝</p>
+    <p data-scene="affection">Luego, entre tanto besito, pasó una cosa muy chistosa, y es que esos besitos y ese amorcito no se quedó con mi amorcita chula, sino que alguien más fue la pobre víctima de mis besos 🤭🤭🤭.</p>
+    <p data-scene="affection">Si le hubieras preguntado a mi mamá si esperaba que en la vida alguno de sus hijos le devolviera sus besos, ella te hubiera dicho que había aceptado su destino, que EQUIVOCADA estaba ella y yo, porque ahora cada que puedo, le mando besitos para mostrar mi cariño y afecto, porque como te dije ese día en el café cielo, <em>me enseñaste a amar</em>, y ahora soy el más grande besador de mi mamá y eso es todo gracias a ti, y darme la confianza para hacerlo 🫶🫶🫶</p>
+    <p data-scene="care">Y así como aprendí qué es el amor, aprendí también qué es el cuidar 🥺🥺, qué significa el dedicarle el tiempo, el esfuerzo y mi energía a una relación todos los días del año, y no solo cuando sea una salida, que no puedo esperarme a un día especial para quererte bien, y que mereces toda la atención del mundo. Pero también aprendí de ti que tampoco es el dar y devolver el amor, sino es nosotros dos amándonos sin importar que, estando ahí para el otro, sin importar quién nos pueda rodear, y que yo no estoy en una deuda contigo por tu amor, pero sí estoy en una relación que tengo que cuidar 🫂💖</p>
+    <p data-scene="faith">Y finalmente cielo, aprendí qué significa la fé, aprendí qué significa creer en algo más grande que tú y qué significa amar y realmente respetar a un mundo en el que no vivo. Si me hubieras preguntado nada más nos conocimos qué opinaba de la religión, probablemente te hubiera dicho algo como "cada quien tiene derecho a sus opiniones, pero nadie a sus propios hechos". Hoy puedo decir que mi opinión de ese entonces no era un hecho. Aprendí que las personas no solo pueden creer en algo y que esta bien, pero que a fin de cuentas es algo inseparable de la persona, que es parte de ellos, y que negárselo sería asaltar la parte más personal de alguien, por creer que eres superior por no tomarte el placer y el amor para creer.</p>
+    <p data-scene="faith">Ese día que encomendaste a mi mamá a Dios cuando se puso mal, sentí algo que no sabría cómo describirte cielo, fue tan lindo, tan maravilloso decir que estabas dedicándole la parte más sagrada de tu persona a mi familia con tal de ver a mi mamá bien, es algo super tierno, y agradezco que lo hayas hecho 🥹🧡. He aprendido a amar cuando rezas antes de comer, antes de dormir y cada detalle con el que me haces saber que Él sí nos ama. Ahora sé que la opinión es decir que no existe, y que el hecho es que es parte de una persona, parte de ti, y es algo que yo quiero y hago el esfuerzo para poder amar. Y por, eso, te agradezco, y aprenderé a amar esa parte de ti, juntos 🥺❤️</p>
+  </div>
+  <footer class="end" id="end">
+    <svg class="window" viewBox="0 0 168 170" aria-hidden="true">
+      <defs><radialGradient id="light"><stop offset="0" stop-color="#dba065" stop-opacity=".48"/><stop offset="1" stop-color="#dba065" stop-opacity="0"/></radialGradient><clipPath id="glass"><path d="M40 134V65Q40 36 84 14Q128 36 128 65V134Z"/></clipPath></defs>
+      <circle class="glow" cx="84" cy="83" r="83" fill="url(#light)"/>
+      <path d="M36 138V65Q36 33 84 9Q132 33 132 65V138Z" fill="#100e14" stroke="#987854" stroke-width="1"/>
+      <g clip-path="url(#glass)">
+      <rect x="40" y="14" width="88" height="120" fill="#201922"/>
+      <g class="pane" stroke="#171018" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M84 14L65 38 84 48 103 38Z" fill="#c68a50"/>
+      <path d="M40 65L65 38 84 48 62 66Z" fill="#526b83"/>
+      <path d="M128 65L103 38 84 48 106 66Z" fill="#a4525b"/>
+      <path d="M40 65L62 66 66 91 40 108Z" fill="#765674"/>
+      <path d="M128 65L106 66 102 91 128 108Z" fill="#526a7b"/>
+      <path d="M62 66L84 48 106 66 102 91 84 108 66 91Z" fill="#c78b55"/>
+      <path d="M40 108L66 91 84 108 65 134H40Z" fill="#566a61"/>
+      <path d="M128 108L102 91 84 108 103 134H128Z" fill="#8c5056"/>
+      <path d="M65 134L84 108 103 134Z" fill="#bb8255"/>
+      </g>
+      <path d="M40 113 64 95 83 113 104 99 128 117V134H40Z" fill="#1b171d" opacity=".77"/>
+      <circle cx="84" cy="72" r="16.5" stroke="#dfb17b" fill="#bc834d" stroke-width="1.1"/>
+      <circle cx="90" cy="70" r="15.5" fill="#211821" stroke="#241821" stroke-width=".8"/>
+      <g fill="#f4d6a6"><circle cx="53" cy="76" r=".9"/><circle cx="111" cy="53" r="1.2"/><circle cx="112" cy="86" r=".7"/></g>
+      <path class="mullion" d="M84 14V48M40 65L62 66M106 66L128 65M40 108L66 91M102 91L128 108M84 108V134"/>
+      </g>
+      <path class="lead-outline" d="M40 134V65Q40 36 84 14Q128 36 128 65V134ZM34 138h100M30 143h108"/>
+    </svg>
+    <div class="end-heart" aria-hidden="true">♥</div><div class="folio">IV / VI</div><div class="small">52!</div>
+    <button class="replay" id="replay">Volver al principio ↑</button>
+  </footer>
+</article>
+</section>
+<aside class="wing right" aria-hidden="true"><canvas class="art" id="right"></canvas></aside>
+</main>
+<noscript><style>.letter[hidden]{display:block!important}.open,.replay{display:none}.cover{min-height:auto}.mobile-scene,.mobile-reading-scene,.wing{display:none!important}</style></noscript>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+const root=document.documentElement,letter=$('carta'),end=$('end');
+let opened=false,progress=0,phase=0,lastDraw=0,visualPhase=0;
+const paragraphs=[...document.querySelectorAll('#letter-body > p')];
+let dawn=0,affection=0,faith=0,vdawn=0,vaffection=0,vfaith=0;
+function sceneProgress(index){const r=paragraphs[index].getBoundingClientRect();return Math.max(0,Math.min(1,(innerHeight*.76-r.top)/(Math.min(r.height,innerHeight*.6)+innerHeight*.25)));}
+
+document.querySelectorAll(".window .pane path").forEach((p,i)=>p.style.setProperty("--pane-i",i));
+document.querySelector('.skip').addEventListener('click',e=>{if(!opened){e.preventDefault();$('open').click();}});
+$('open').addEventListener('click',()=>{opened=true;document.body.classList.add('opened');letter.hidden=false;fitAll();if(!letter.classList.contains('enter'))letter.classList.add('enter');$('open').setAttribute('aria-expanded','true');$('open').textContent='Leer carta ↘';letter.focus({preventScroll:true});letter.scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'start'});update();});
+$('replay').addEventListener('click',()=>{end.classList.remove('reached');opened=false;document.body.classList.remove('opened');letter.hidden=true;letter.classList.remove('enter');$('open').setAttribute('aria-expanded','false');$('open').innerHTML='Abrir carta <span class="arrow" aria-hidden="true">↘</span>';window.scrollTo({top:0,behavior:'instant'});$('open').focus({preventScroll:true});update();});
+function update(){const start=Math.max(0,letter.getBoundingClientRect().top+scrollY-26),span=Math.max(1,document.documentElement.scrollHeight-innerHeight-start);progress=opened?Math.max(0,Math.min(1,(scrollY-start)/span)):0;phase=opened?Math.max(.14,progress):0;dawn=opened?sceneProgress(3):0;affection=opened?sceneProgress(5):0;faith=opened?sceneProgress(8):0;root.style.setProperty('--dawn',dawn.toFixed(3));root.style.setProperty('--affection',affection.toFixed(3));root.style.setProperty('--faith',faith.toFixed(3));root.style.setProperty('--progress',(progress*100).toFixed(2)+'%');root.style.setProperty('--warm',(.12+.88*phase).toFixed(3));root.style.setProperty('--light-level',phase.toFixed(3));if(opened&&end.getBoundingClientRect().top<innerHeight*.85)end.classList.add('reached');if(reduce.matches)draw(0);}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',()=>{fitAll();update();draw(0);});
+// A hand-directed, procedural textual engraving. All geometry is local and seeded.
+const W=64,H=94;
+const P={sky:[111,103,105],cloud:[143,125,130],far:[129,111,121],rock:[176,155,145],pine:[122,139,124],gold:[255,201,111],red:[248,139,132],water:[176,158,151],orange:[255,160,92],white:[239,221,199]};
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+function rand(seed){return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};}
+function mix(a,b,t){return a.map((x,i)=>Math.round(x+(b[i]-x)*t));}
+function rgb(c,a=1){return `rgba(${c.join(',')},${a})`;}
+function grid(){return Array.from({length:H},()=>Array(W).fill(null));}
+function put(g,x,y,c,k,a=1){x=Math.round(x);y=Math.round(y);if(x>=0&&x<W&&y>=0&&y<H)g[y][x]={c,k,a};}
+function txt(g,x,y,s,k,a=1){Array.from(s).forEach((c,i)=>{if(c!==' ')put(g,x+i,y,c,k,a);});}
+function clear(g,x,y){if(x>=0&&x<W&&y>=0&&y<H)g[y][x]=null;}
+function ridge(points,x){let j=0;while(j+1<points.length-1&&x>points[j+1][0])j++;const [a,b]=[points[j],points[j+1]],s=(b[1]-a[1])/(b[0]-a[0]);return [a[1]+s*(x-a[0]),s];}
+function choose(r,s){return s[Math.floor(r()*s.length)];}
+function mountain(g,points,k,seed,base,style){const r=rand(seed);for(let x=0;x<W;x++){const [ry,slope]=ridge(points,x),top=Math.round(ry);for(let y=top;y<base;y++){clear(g,x,y);const depth=y-top;const shade=.5+.5*Math.sin(x*.36+y*.15+Math.sin(x*.13)*2);const isSnow=depth<4+4*shade;const density=style==='front'?.74:style==='mid'?.69:.54;if(y===top){put(g,x,y,slope<-.28?'/':slope>.28?'\\':'_',k,style==='front'?.98:.85);continue;}if(r()<density){let chars=isSnow?'.,:;^/\\':' .:;-=+/#';if(style==='far')chars='..::--~';if(!isSnow&&shade>.6&&style!=='far')chars=':;=+*/#';put(g,x,y,choose(r,chars),isSnow&&style!=='far'?'white':k,clamp(.24+shade*.37+((style==='front')?.17:0)-depth*.004,.15,.93));}}}}
+function pine(g,x,y,h,k,seed){const r=rand(seed);for(let row=0;row<h;row++){let half=Math.max(0,Math.floor(row*.36+Math.sin(row*1.3)*.6));for(let dx=-half;dx<=half;dx++){let c=dx===0?(row===0?'^':'|'):dx===-half?'/':dx===half?'\\':choose(r,'^/|\\:');put(g,x+dx,y+row,c,k,dx===0?.92:.54+r()*.35);}}put(g,x,y+h,'|',k,.92);put(g,x,y+h+1,'|',k,.8);}
+function cloud(g,x0,y0,width,seed){const r=rand(seed);for(let x=0;x<width;x++){let y=y0+Math.round(Math.sin(x/5)*1.6+Math.cos(x/9)*1.3);for(let dy=0;dy<3;dy++){if(r()<.78-dy*.21)put(g,x+x0,y+dy,choose(r,'~-=._:'),'cloud',.20+r()*.27);}}}
+function scene(side){const g=grid(),left=side==='left',r=rand(left?52027:27052),warm=left?'gold':'red',cx=left?31:33,cy=22,rx=16,ry=10.5;const stars=[],used=new Set();
+// Deliberate, sparse constellation field: exactly 26 per landscape.
+while(stars.length<26){let x=2+Math.floor(r()*(W-4)),y=2+Math.floor(r()*39),key=x+','+y;if(used.has(key)||((x-cx)/21)**2+((y-cy)/15)**2<1)continue;used.add(key);stars.push({x,y,c:choose(r,'.·+*✦'),a:.57+r()*.4,f:r()*6.28});}
+cloud(g,-3,8,24,11);cloud(g,47,12,24,33);cloud(g,1,32,26,52);cloud(g,38,37,30,63);
+// The sun and moon are genuinely textured, not simple empty outlines.
+for(let y=cy-ry-2;y<=cy+ry+2;y++)for(let x=cx-rx-2;x<=cx+rx+2;x++){let u=(x-cx)/rx,v=(y-cy)/ry,d=Math.hypot(u,v);if(d>1.09)continue;if(d>.91){put(g,x,y,Math.abs(v)>.72?choose(r,'_-='):u<0?'/':'\\',warm,.95);continue;}if(d<.9){let lit=.57+.27*Math.sin(u*4+v*5)+.15*Math.cos(v*13-u*8);if(!left){lit=.72-.22*u-.13*v;for(const [a,b,rad] of [[-.35,.22,.24],[.40,-.37,.20],[.43,.40,.14],[-.48,-.49,.12]]){const z=Math.hypot(u-a,v-b)/rad;lit+=z<.72?-.48:z<1.12?.21:0;}lit=clamp(lit+.065*Math.sin(u*23+v*12));}
+const chars=left?' .:;-=+*#%@':' .,:;-=+*#@';const i=clamp(Math.floor(lit*(chars.length-1)),0,chars.length-1);if(r()<.94)put(g,x,y,chars[i],warm,left?.69+lit*.25:.53+lit*.36);}}
+if(left){for(let i=0;i<16;i++){let a=i*Math.PI/8;let dx=Math.cos(a),dy=Math.sin(a),length=i%2===0?5:3;for(let j=0;j<length;j++){let x=cx+dx*(19+j),y=cy+dy*(13+j*.58);put(g,x,y,Math.abs(dy)>.8?'|':Math.abs(dx)>.8?'-':dx*dy>0?'\\':'/',warm,.91-j*.09);}}}
+else{ // a subtle orbital arc, formed only by characters
+for(let i=0;i<47;i++){let a=(.12+i/46*.77)*Math.PI;put(g,cx+Math.cos(a)*24,cy+Math.sin(a)*14, i%4===0?'·':'.','white',.37);}}
+const far=left?[[0,51],[8,43],[15,48],[26,36],[34,44],[45,34],[54,43],[63,39]]:[[0,43],[10,36],[19,46],[28,40],[40,49],[51,36],[63,47]];
+const mid=left?[[0,60],[10,50],[19,58],[30,44],[43,56],[52,46],[63,56]]:[[0,57],[10,49],[20,60],[32,45],[43,57],[53,50],[63,54]];
+const near=left?[[0,66],[9,62],[18,69],[28,58],[38,65],[47,61],[63,70]]:[[0,69],[9,60],[20,66],[31,60],[43,68],[53,61],[63,65]];
+mountain(g,far,'far',left?23:24,68,'far');mountain(g,mid,'rock',left?52:53,76,'mid');mountain(g,near,'rock',left?27:28,79,'front');
+// Forest and a reflective lake; foreground is lit by its celestial body.
+for(let i=0;i<15;i++){let x=Math.round(i*4.3+r()*2),y=66+Math.floor(r()*7),h=5+Math.floor(r()*8);if(Math.abs(x-32)<9)continue;pine(g,x,y,h,'pine',Math.floor(r()*100000));}
+for(let y=80;y<H;y++){let center=32+(left?-1:1)*Math.sin(y*.32)*4;let broad=8+(y-80)*.87;for(let x=0;x<W;x++){const water=Math.abs(x-center)<broad;const a=water?.44+r()*.38:.35+r()*.35;const ch=water?choose(r,'~_-= .'):choose(r,'.:,;v/');if(r()<(water?.88:.67))put(g,x,y,ch,water?'water':'pine',a);}}
+// Strong, broken reflection aligned below each celestial body.
+for(let y=79;y<92;y++){let half=2+Math.floor((y-79)*.55),c=cx+Math.sin(y*.6)*2;for(let x=Math.round(c-half);x<=c+half;x++){if(r()<.82)put(g,x,y,choose(r,'~-=.'),warm,.64+r()*.3);}}
+// Delicate floral stems in the foreground, colored in the reading phase.
+for(let i=0;i<9;i++){let x=left?(i<5?2+i*4:45+(i-5)*4):(i<4?2+i*4:43+(i-4)*4),y=83+Math.floor(r()*7);if(x>=W-2)continue;if(left){put(g,x,y,'*','gold',.99);put(g,x-1,y,'-','gold',.76);put(g,x+1,y,'-','gold',.76);put(g,x,y-1,'+','gold',.82);put(g,x,y+1,'|','pine',.85);}else{put(g,x,y,'@','red',.99);put(g,x-1,y,'(','red',.8);put(g,x+1,y,')','red',.8);put(g,x,y+1,'|','pine',.85);}put(g,x-1,y+1,'\\','pine',.65);put(g,x+1,y+2,'/','pine',.65);}
+// The seals are tiny, placed on the same shore, near the inside edge.
+if(left){txt(g,47,77,'    __','white',.93);txt(g,46,78," __/o `-._",'white',.92);txt(g,46,79,'(_________)','white',.82);}else{txt(g,7,77,' __','white',.93);txt(g,2,78,"_.-' o\\__",'white',.92);txt(g,2,79,'(_________)','white',.82);}
+return {g,stars,side,cx,cy};}
+const L=scene('left'),R=scene('right');
+function panorama(){const g=grid(),r=rand(521827),stars=[],used=new Set(),orbs=[{x:16,y:11,k:'gold'},{x:47,y:11,k:'red'}];
+while(stars.length<52){let x=1+Math.floor(r()*62),y=1+Math.floor(r()*21),key=x+','+y;if(used.has(key)||orbs.some(o=>((x-o.x)/11)**2+((y-o.y)/8)**2<1))continue;used.add(key);stars.push({x,y,c:choose(r,'.·+*'),a:.48+r()*.4,f:r()*6.28,k:x<32?'gold':'red'});}
+for(const o of orbs){for(let y=o.y-7;y<=o.y+7;y++)for(let x=o.x-10;x<=o.x+10;x++){const u=(x-o.x)/9,v=(y-o.y)/5.8,d=Math.hypot(u,v);if(d>.99)continue;let lit=.52+.24*Math.sin(u*6+v*5)+.15*Math.cos(v*9-u*7);const chars=o.k==='gold'?' .:;-=+*#@':' .,:;-=+*o';const c=d>.86?Math.abs(v)>.65?'-':u<0?'/':'\\':chars[clamp(Math.floor(lit*(chars.length-1)),0,chars.length-1)];put(g,x,y,c,o.k,.74+lit*.2);}}
+for(let i=0;i<12;i++){let a=i*Math.PI/6,dx=Math.cos(a),dy=Math.sin(a);for(let j=0;j<(i%3===0?3:2);j++)put(g,16+dx*(11+j),11+dy*(7+j*.5),Math.abs(dy)>.75?'|':Math.abs(dx)>.7?'-':dx*dy>0?'\\':'/','gold',.8-j*.15);}
+const far=[[0,26],[8,21],[15,27],[25,20],[32,25],[41,19],[50,25],[57,21],[63,26]],mid=[[0,31],[9,26],[17,32],[24,25],[34,31],[43,25],[52,33],[61,26],[63,28]];mountain(g,far,'far',52,36,'far');mountain(g,mid,'rock',27,36,'mid');for(let x=2;x<64;x+=7){if(x>27&&x<37)continue;pine(g,x,30+(x%3),4+(x%4),'pine',x*52);}
+for(let y=36;y<40;y++)for(let x=0;x<W;x++){if(r()<.65)put(g,x,y,choose(r,'~_-.'),x<32?'gold':'red',.35+r()*.4);}
+return {g,stars,side:'panorama',cx:32,cy:11};}
+const M=panorama(),canvases=[$('left'),$('right'),$('mobile'),$('mobileRead')];
+function fit(c){const b=c.getBoundingClientRect();if(!b.width||!b.height)return;const d=Math.min(2,devicePixelRatio||1);c.width=Math.round(b.width*d);c.height=Math.round(b.height*d);}
+function fitAll(){canvases.forEach(fit);}
+function paintGrid(ctx,s,x,y,w,h,t,short=false){const top=0,bottom=short?40:H,rows=bottom-top,cw=w/W,ch=h/rows,fs=Math.min(cw/.61,ch*1.03);const tone=.48+.52*visualPhase;const accent=s.side==='left'?P.gold:s.side==='right'?P.red:P.orange;const q=reduce.matches?0:t;ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${fs}px Consolas, Liberation Mono, monospace`;
+// Tiny ambient washes behind each engraved celestial body.
+const gx=x+(s.cx+.5)*cw,gy=y+(s.cy-top+.5)*ch,rad=Math.min(w*.43,h*.27);const glow=ctx.createRadialGradient(gx,gy,rad*.12,gx,gy,rad);glow.addColorStop(0,rgb(accent,.10+.045*visualPhase));glow.addColorStop(.5,rgb(accent,.035));glow.addColorStop(1,rgb(accent,0));ctx.fillStyle=glow;ctx.fillRect(x,y,w,h);
+if(vdawn>.001){const hy=y+h*(short?.71:.70),hx=x+w*.5;const horizon=ctx.createRadialGradient(hx,hy,0,hx,hy,Math.min(w*.86,h*.37));horizon.addColorStop(0,rgb(mix(accent,P.orange,.48),.135*vdawn));horizon.addColorStop(.48,rgb(P.orange,.045*vdawn));horizon.addColorStop(1,rgb(P.orange,0));ctx.fillStyle=horizon;ctx.fillRect(x,y,w,h);}
+for(let j=top;j<bottom;j++)for(let i=0;i<W;i++){const a=s.g[j][i];if(!a)continue;let b=P[a.k]||P.rock;if(['gold','red'].includes(a.k))b=mix(P.white,b,tone);else if(a.k==='water')b=mix(P.water,accent,.16+.24*visualPhase);else if(a.k==='far')b=mix(P.far,accent,.12+.2*visualPhase);else if(a.k==='rock')b=mix(P.rock,accent,.09+.22*visualPhase);else if(a.k==='pine')b=mix(P.pine,accent,.06+.15*visualPhase);if(!short&&j>=77&&['gold','red','water'].includes(a.k))b=mix(b,P.orange,Math.max(0,(visualPhase-.30)/.70)*.76);let opacity=Math.min(1,a.a*(a.k==='rock'||a.k==='pine'?1.15:1));if(j>=80&&['water','gold','red'].includes(a.k))opacity*=.88+.12*Math.sin(q*.0011+i*.31+j*.41);if(a.k==='cloud')opacity*=.89+.11*Math.sin(q*.0003+j*.14);if(!short&&j>=83&&['gold','red'].includes(a.k)){opacity=Math.min(1,opacity*(1+.22*vaffection));}if(a.k==='far'||a.k==='rock'){b=mix(b,P.orange,.12*vdawn);}if(vfaith>.001&&a.k==='white'){b=mix(b,P.gold,.12*vfaith);}if(!short&&j>=80&&a.k==='water'&&!reduce.matches){const ripple=Math.pow(Math.max(0,Math.cos(q*.0008-j*.47+i*.21)),8);opacity=Math.min(1,opacity*(1+.22*ripple));}ctx.fillStyle=rgb(b,opacity);ctx.fillText(a.c,x+(i+.5)*cw,y+(j-top+.5)*ch);}
+for(const star of s.stars){if(star.y<top||star.y>=bottom)continue;let b=mix(P.white,star.k?P[star.k]:accent,.32+visualPhase*.35);ctx.fillStyle=rgb(b,star.a*(.8+.2*Math.sin(q*.001+star.f)));ctx.fillText(star.c,x+(star.x+.5)*cw,y+(star.y-top+.5)*ch);}}
+function draw(t){visualPhase=reduce.matches?phase:visualPhase+(phase-visualPhase)*.16;vdawn=reduce.matches?dawn:vdawn+(dawn-vdawn)*.12;vaffection=reduce.matches?affection:vaffection+(affection-vaffection)*.12;vfaith=reduce.matches?faith:vfaith+(faith-vfaith)*.12;for(let i=0;i<canvases.length;i++){const c=canvases[i];if(!c.width||!c.height||!c.getClientRects().length)continue;const bounds=c.getBoundingClientRect();if(bounds.bottom<0||bounds.top>innerHeight)continue;const ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);if(i>=2)paintGrid(ctx,M,0,0,c.width,c.height,t,true);else paintGrid(ctx,i===0?L:R,0,0,c.width,c.height,t);}}
+let raf=0;function animate(t){if(document.hidden||reduce.matches){raf=0;return;}if(t-lastDraw>95){draw(t);lastDraw=t;}raf=requestAnimationFrame(animate);}
+function startAnimation(){if(!raf&&!reduce.matches&&!document.hidden)raf=requestAnimationFrame(animate);}
+fitAll();update();draw(0);startAnimation();reduce.addEventListener?.('change',()=>{if(reduce.matches){cancelAnimationFrame(raf);raf=0;draw(0);}else startAnimation();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);raf=0;}else{draw(0);startAnimation();}});
+</script>
+</body>
+</html>
